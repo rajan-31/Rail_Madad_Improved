@@ -60,8 +60,13 @@ The frontend will now run on http://localhost:3000.
 
 ## Full Workflow
 The user submits a complaint (text description and image) via the React frontend.
+
 The data is sent to the Flask backend API, where:
+
 The description is processed by an NLP model for keyword extraction.
+
 The image is processed by the OCR model to extract text and metadata.
+
 The priority and category of the complaint are predicted.
+
 The backend responds with the predicted category and priority, which is displayed on the frontend.
