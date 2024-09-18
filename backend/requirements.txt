@@ -1,0 +1,7 @@
+Flask
+numpy
+opencv-python
+pytesseract
+nltk
+scikit-learn
+joblib

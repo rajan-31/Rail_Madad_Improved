@@ -22,3 +22,46 @@ Given the vast corpus of data that will be available, it will be used to predict
 
 ​![Workflow](./assets/img/SIH_R01.png)
 
+---
+
+Instructions to Run the Project
+
+## Backend Setup
+
+```cd backend```
+
+Create a virtual environment and install dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows use venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Run the Flask app:
+
+```python app.py```
+
+The Flask backend will now run on http://localhost:5000.
+
+## Frontend Setup
+
+```cd frontend```
+
+Install the dependencies:
+
+```npm install```
+
+Run the React development server:
+
+```npm start```
+
+The frontend will now run on http://localhost:3000.
+
+## Full Workflow
+The user submits a complaint (text description and image) via the React frontend.
+The data is sent to the Flask backend API, where:
+The description is processed by an NLP model for keyword extraction.
+The image is processed by the OCR model to extract text and metadata.
+The priority and category of the complaint are predicted.
+The backend responds with the predicted category and priority, which is displayed on the frontend.
